@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+   <link rel="stylesheet" href="about.css"> 
+</head>
+<body>
+<!--header section--> 
+<div id="header">
+    <div class="container">
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</div>
+
+<!---about section-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/aboutMe.jpeg" alt="About Me">
+            </div>
+            <div class="about-col-2">
+                <h2 class="sub-title">About Me</h2>
+                <p>As a third year computer engineering student, I am passionate to coding and trying new things.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><h5>Web Development</h5>HTML, CSS, JS, C#, MSSQL</li><br>
+                        <li><h5>Machine Learning and Data Science</h5>Python, Regression and Classification Problems, Supervised and Unsupervised Learning</li><br>
+                        <li><h5>Embedded Software</h5>C, C++, Arduino</li><br>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li>
+                            <h5>MIUUL Machine Learning Camp Attendee</h5><br>
+                            Covered Topics:
+                            <ul>
+                                <li>-Python Programming for Data Science</li>
+                                <li>-Feature Engineering</li>
+                                <li>-Classification Techniques</li>
+                                <li>-Supervised & Unsupervised Learning</li>
+                                <li>-Machine Learning Pipeline</li><br>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h5>A competitor in Model Sattellite Competition</h5>
+                            <p>I was responsible from flight-software desing. I used C, C++ and Arduino.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <h4>University</h4>
+                        <li>Bachelor's Degree, Computer Engineering at <i>Karadeniz Technical University(2022,Present)</i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<!--footer section-->
+<footer>
+    <div class="footerBottom">
+        <p>Copyright &copy; 2025; Designed by <span class="designer">Esra Noyan</span></p>
+    </div>
+</footer>
+
+</body>
+</html>
