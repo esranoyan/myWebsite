@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <!--header section-->
+    <div id="header">
+        <div class="container">
+            <nav class="menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-left">
+                            <h1 class="sub-title">Contact Me</h1>
+                            <p><a href="mailto:esranoyan748@gmail.com"><i class="fas fa-paper-plane"></i>esranoyan748@gmail.com</a></p>
+                            <div class="social-icons">
+                                <a href="https://www.linkedin.com/in/esra-noyan/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com/esranoyan" target="_blank"><i class="fab fa-github-square"></i></a> 
+                                <a href="https://medium.com/@esranoyan" target="_blank"><i class="fab fa-medium"></i></a>   
+                                <a href="https://www.hackerrank.com/profile/esranoyan748" target="_blank"><i class="fab fa-hackerrank"></i></a>
+                            </div>
+                            <a href="EsraNoyan_CV.pdf" download class="button">
+                                <i class="fas fa-file-download"></i> Download CV</a>
+                        </div>
+                        <div class="contact-right">
+                            <form name="submit-to-google-sheet">
+                                <input type="text" name="Name" placeholder="Your Email" required>
+                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                <button type="submit" class="button2">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const scriptURL = '<https://script.google.com/macros/s/AKfycbwkxRZ2XvT2EaeTtIIM9Nu3zO62aGKPQRzAMb394C2eei76ZFFyFHSy0NACQo8vWRAM/exec>'
+        const form = document.forms['submit-to-google-sheet']
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+        </script>
+<!--footer section-->
+    <footer>
+        <div class="footerBottom">
+            <p>Copyright &copy; 2025; Designed by <span class="designer">Esra Noyan</span></p>
+        </div>
+    </footer>
+</body>
+</html>
