@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url(images/105277.jpg);
+    background-image: url(images/background.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -73,8 +73,9 @@ body {
 }
 
 .header a {
-    color:rgb(25, 9, 100);
+    color:#272727;
     font-weight: bold;
+    text-decoration:underline;
 }
 
 .blog-container {
@@ -86,8 +87,7 @@ body {
 
 .blog-box {
     width: 350px;
-    background: #fff;
-    border: 1px solid #ececec;
+    border: 1px solid #272727;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: 0.3s ease-in-out;
@@ -127,7 +127,7 @@ body {
 }
 
 .blog-text p {
-    color: #9b9b9b;
+    color:#272727;
     font-size: 0.9rem;
     overflow: hidden;
     display: -webkit-box;
