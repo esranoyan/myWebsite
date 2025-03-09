@@ -189,6 +189,12 @@ form input::placeholder, form textarea::placeholder {
     opacity: 1;
 }
 
+#msg{
+    color:#262626;
+    margin-top: 20px;
+    display: block;
+}
+
 /* footer section */
 .footerBottom{
     background-color:silver;
