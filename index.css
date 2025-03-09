@@ -50,6 +50,7 @@ body {
     position: absolute;
     left: 20px;
     top:10px;
+    background: none;
 }
 
 .menu a {
